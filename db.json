@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "A Mouse in Boots",
+      "author": "Jason Goebel",
+      "body": "One day a mouse walked in wearing boots.  The End"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": [
+    {
+      "name": "typicode"
+    }
+  ],
+  "other": [
+    {
+      "id": 1,
+      "color": "blue"
+    }
+  ]
+}
