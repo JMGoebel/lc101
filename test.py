@@ -1,32 +1,14 @@
-'''Testing Grounds'''
+str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan sem ut ligula scelerisque sollicitudin. Ut at sagittis augue. Praesent quis rhoncus justo. Aliquam erat volutpat. Donec sit amet suscipit metus, non lobortis massa. Vestibulum augue ex, dapibus ac suscipit vel, volutpat eget massa. Donec nec velit non ligula efficitur luctus."
 
-class Clothing:
-    '''This class represents wearable clothing'''
-    def __init__(self, location, color, part):
-        self.color = color
-        self.location = location
-        self.part = part
-        self.wearing = False
+str = input()
 
-    def put_on(self):
-        '''Used to put on clothing'''
-        if not self.wearing:
-            print('You on put on the {} {}'.format(self.color, self.part))
-            self.wearing = True
-        else:
-            print('You are already wearing the {} shirt'.format(self.color))
+l = list(str)
+l_dict = {}
+for letter in l:
+    if l_dict.get(letter):
+        l_dict[letter] += 1
+    else:
+        l_dict[letter] = 1
 
-    def take_off(self):
-        '''Used to remove clothing'''
-        if self.wearing:
-            print('You take off the {} shirt'.format(self.color))
-            self.wearing = False
-        else:
-            print('You are are not wearing the {} shirt'.format(self.color))
-
-shirt = Clothing('Torso', 'red', 'shirt')
-
-shirt.put_on()
-shirt.put_on()
-shirt.take_off()
-shirt.take_off()
+for key in l_dict.keys():
+    print("{}: {}".format(key, l_dict[key]))
